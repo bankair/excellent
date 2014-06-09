@@ -60,16 +60,38 @@
 					<p>
 						Assume you have the following class definition,
 					</p>
-					<script src="http://gist.github.com/202333.js"></script>
+          <div class="code">
+            <pre><code class="ruby">class ShoppingBasket < ActiveRecord::Base
+
+  def initialize(items = [])
+    self.items = items
+  end
+
+end</code></pre>
+          </div>
 					<p>
 						then Excellent will report the problems in this piece of code:
 					</p>
-					<script src="http://gist.github.com/202339.js"></script>
+          <div class="code">
+            <pre><code class="bash">$ excellent shopping_basket.rb
+
+  Excellent result:
+
+  test.rb
+    * Line   1: ShoppingBasket does not validate any attributes.
+    * Line   1: ShoppingBasket defines initialize method.
+    * Line   1: ShoppingBasket does not specify attr_accessible.
+
+  Found 3 warnings.</code></pre>
+          </div>
 					<h2>Installation</h2>
 					<p>
 						Excellent is available as a gem:
 					</p>
-					<script src="http://gist.github.com/202345.js"></script>
+                  <div class="code">
+                    <pre><code class="bash">$ gem install excellent
+</code></pre>
+                  </div>
 					<h2>Get involved!</h2>
 					<p>
 						<a href="http://wiki.github.com/simplabs/excellent" title="Excellent's wiki @ github">Have a look at the Wiki</a> that explains all the checks that are currently implemented. If you miss a check, please <a href="http://github.com/simplabs/excellent/issues" title="Excellent's issues @ github">fill an issue</a> on github.
