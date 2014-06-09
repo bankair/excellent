@@ -1,75 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Excellent - static analysis for Ruby and Rails"/>
+  	<meta name="keywords" content="ruby, rails, static analysis, code quality" />
 		<meta name="language" content="en"/>
 		<meta name="content-language" content="en"/>
-		<meta name="publisher" content="Marco Otte-Witte" />
-    <link rel="stylesheet" href="http://simplabs.com/css/main.css">
-    <link rel="shortcut icon" type="image/x-icon" href="http://simplabs.com/images/simplabs.ico" />
+		<meta name="publisher" content="simplabs - Marco Otte-Witte" />
     <title>Excellent - static analysis for Ruby and Rails</title>
-	</head>
-  <body>
-    <div id="main">
-      <div id="content">
-        <div id="content-head">
-          <h2><span>simple web Engineering</span></h2>
+    <link rel="shortcut icon" type="image/x-icon" href="http://simplabs.com/images/simplabs.ico" />
+    <link rel="apple-touch-icon" href="http://simplabs.com/images/apple-57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://simplabs.com/images/apple-72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://simplabs.com/images/apple-114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="http://simplabs.com/images/apple-144.png">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css">
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.4/styles/github.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:300,400">
+    <link rel="stylesheet" href="http://simplabs.com/css/main.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css" media="screen">
+      div.code {
+        background-color: #f8f8ff;
+        overflow-x: scroll;
+        line-height: 120%;
+        font-size: 120%;
+        border: 1px solid #ddd;
+        border-radius: 0;
+        margin: 1em 0;
+      }
+      div.code pre {
+        margin: 0;
+        border: none;
+        background-color: transparent;
+      }
+    </style>
+  </head>
+	<body>
+    <div class="container">
+      <div id="header" class="row">
+        <div class="col-md-12">
+          <a href="/" title="simplabs.com - home"></a>
         </div>
-        <div id="content-body">
-          <div class="logo">
-            <a href="http://simplabs.com" title="simplabs.com - home"></a>
-            <div class="blocker">&nbsp;</div>
-          </div>
-          <div id="main-content">
-            <div class="sections">
-              <section>
-								<h3>Static analysis for Ruby <strong>and Rails</strong></h3>
-								<p>
-									<a href="http://github.com/simplabs/excellent" title="Excellent @ github">Excellent</a> <strong>finds the nasty lines in your code</strong>. It implements a comprehensive set of checks for possibly buggy parts of your app that would <strong>otherwise make it into your repo and eventually to the production server</strong>.
-								</p>
-							</section>
-							<section>
-								<h3>Example</h3>
-								<p>
-									Assume you have the following class definition,
-								</p>
-								<script src="http://gist.github.com/202333.js"></script>
-								<p>
-									then Excellent will report the problems in this piece of code:
-								</p>
-								<script src="http://gist.github.com/202339.js"></script>
-							</section>
-							<section>
-								<h3>Installation</h3>
-								<p>
-									Excellent is available as a gem:
-								</p>
-								<script src="http://gist.github.com/202345.js"></script>
-							</section>
-							<section>
-								<h3>Get involved!</h3>
-								<p>
-									<a href="http://wiki.github.com/simplabs/excellent" title="Excellent's wiki @ github">Have a look at the Wiki</a> that explains all the checks that are currently implemented. If you miss a check, please <a href="http://github.com/simplabs/excellent/issues" title="Excellent's issues @ github">fill an issue</a> on github.
-								</p>
-								<p>
-									You can also <a href="http://github.com/simplabs/excellent" title="Excellent's repo @ github">fork Excellent on github</a> (you might want to have a <a href="http://rdoc.info/github/simplabs/excellent/frames" title="Excellent's RDoc">look at the RDoc</a> then).
-								</p>
-							</section>
-							<section>
-								<h3>Copyright/ Acknowledgement</h3>
-								<p>
-									Excellent is developed by and &copy; <a href="http://simplabs.com" title="simplabs.com">Marco Otte-Witte</a>. It is released under the <a href="http://github.com/simplabs/excellent/blob/master/MIT-LICENSE" title="MIT License">MIT License</a> and inspired by the great gems <a href="https://github.com/martinjandrews/roodi" title="roodi @ github">roodi</a>, <a href="https://github.com/troessner/reek" title="reek @ github">reek</a> and <a href="https://github.com/seattlerb/flog" title="flog @ github">flog</a>.
-								</p>
-							</section>
-            </div>
-          </div>
+      </div>
+      <div id="main-content" class="row">
+        <div class="col-md-6 col-md-offset-3">
+					<h2>Static analysis for Ruby <strong>and Rails</strong></h2>
+					<p>
+						<a href="http://github.com/simplabs/excellent" title="Excellent @ github">Excellent</a> <strong>finds the nasty lines in your code</strong>. It implements a comprehensive set of checks for possibly buggy parts of your app that would <strong>otherwise make it into your repo and eventually to the production server</strong>.
+					</p>
+					<h2>Example</h2>
+					<p>
+						Assume you have the following class definition,
+					</p>
+					<script src="http://gist.github.com/202333.js"></script>
+					<p>
+						then Excellent will report the problems in this piece of code:
+					</p>
+					<script src="http://gist.github.com/202339.js"></script>
+					<h2>Installation</h2>
+					<p>
+						Excellent is available as a gem:
+					</p>
+					<script src="http://gist.github.com/202345.js"></script>
+					<h2>Get involved!</h2>
+					<p>
+						<a href="http://wiki.github.com/simplabs/excellent" title="Excellent's wiki @ github">Have a look at the Wiki</a> that explains all the checks that are currently implemented. If you miss a check, please <a href="http://github.com/simplabs/excellent/issues" title="Excellent's issues @ github">fill an issue</a> on github.
+					</p>
+					<p>
+						You can also <a href="http://github.com/simplabs/excellent" title="Excellent's repo @ github">fork Excellent on github</a> (you might want to have a <a href="http://rdoc.info/github/simplabs/excellent/frames" title="Excellent's RDoc">look at the RDoc</a> then).
+					</p>
+					<h2>Copyright/ Acknowledgement</h2>
+					<p>
+						Excellent is developed by and &copy; <a href="http://simplabs.com" title="simplabs.com">Marco Otte-Witte</a>. It is released under the <a href="http://github.com/simplabs/excellent/blob/master/MIT-LICENSE" title="MIT License">MIT License</a> and inspired by the great gems <a href="https://github.com/martinjandrews/roodi" title="roodi @ github">roodi</a>, <a href="https://github.com/troessner/reek" title="reek @ github">reek</a> and <a href="https://github.com/seattlerb/flog" title="flog @ github">flog</a>.
+					</p>
         </div>
       </div>
     </div>
+    <script src="//yandex.st/highlightjs/7.4/highlight.min.js"></script>
     <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
       var _gauges = _gauges || [];
       (function() {
         var t   = document.createElement('script');
